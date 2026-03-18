@@ -440,16 +440,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-started-my-internship-at-bytedance-building-a-coding-agent-system-and-designing-automated-evaluation-benchmarks-from-scratch",
+          title: 'Started my internship at ByteDance — building a coding agent system and designing...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-submitted-our-gcao-paper-to-knowledge-based-systems-a-year-of-gravitational-clustering-distilled-into-one-manuscript-fingers-crossed",
+          title: 'Submitted our GCAO paper to Knowledge-Based Systems. A year of gravitational clustering distilled...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-admitted-to-uc-san-diego-s-mscs-program-for-fall-2026-san-diego-here-i-come-time-to-learn-to-surf-properly",
+          title: 'Admitted to UC San Diego’s MSCS program for Fall 2026. San Diego, here...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
