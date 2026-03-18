@@ -1,189 +1,247 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Jun Wang
+  label: Incoming MSCS student at UCSD (Fall 2026)
+  email: wangjun170417@163.com
+  location: Beijing, China
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: >
+    Incoming M.S. student in Computer Science at UCSD (Fall 2026), with research interests in
+    clustering algorithms, gravitational optimization, and AI agent systems. I enjoy building
+    practical ML pipelines and physics-inspired optimization methods for complex data.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
-    - network: LinkedIn
-      username: example
+      username: kaikkd
 
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+    street: No. 35, Qinghua East Road, Haidian District
+    city: Beijing
+    region: Beijing
+    postalCode: 100083
+    countryCode: CN
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: University of California, San Diego
+        location: San Diego, CA, USA
+        area: Computer Science
+        studyType: Master of Science
+        start_date: 2026-09-01
         highlights:
-          - Description 1.
-          - Description 2.
+          - Incoming student for Fall 2026.
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: Beijing Forestry University
+        location: Beijing, China
+        area: Urban Forestry (Major), Computer Science and Technology (Minor)
+        studyType: Bachelor of Agriculture
+        start_date: 2022-09-01
+        end_date: 2026-07-01
+        score: 84.19/100
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: ByteDance
+        position: Agent Automated Evaluation Engineer
+        location: Beijing, China
+        start_date: 2025-08-01
         highlights:
-          - Relativity
-          - Description 2.
+          - Led full-stack development of a developer-facing coding agent system from prompt input to visual interface output.
+          - Implemented real-time streaming rendering with WebSocket/SSE and multi-turn instruction parsing, reducing end-to-end latency by 40%.
+          - Designed and launched an automated evaluation system with a 150-task benchmark for code generation and reasoning.
+          - Improved code generation success rate by 12% and reduced single-round evaluation time from 6 hours to 1 hour.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: LargeV Instrument Corp., Ltd.
+        position: Data Analyst Intern
+        location: Beijing, China
+        start_date: 2024-10-01
+        end_date: 2024-12-01
         highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+          - Built a Python-based automated pipeline for over 15,000 dental CT images using OpenCV and Pydicom, improving data quality by 70%.
+          - Developed labeling consistency analysis with ANOVA and clustering, reducing rework rate by 45%.
+          - Optimized SAM+MedLSAM prompt encoder in PyTorch for oral imaging and reached 0.92 Dice score.
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: "FCDNet: A Multi-Scale Attention Network for Forest Change Detection Using Dual-Temporal Very-High-Resolution Remote Sensing Images"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Jun Wang
+          - Zongqi Yao
+          - Long Chen
+          - Ruijing Yang
+          - Xiaoli Zha
+        publisher: IEEE Transactions on Geoscience and Remote Sensing
+        releaseDate: 2025-01-01
+        url: https://doi.org/10.1109/TGRS.2025.3631750
+        summary: Published in TGRS, volume 63, article 4422515.
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: "GCAO: Group-driven Clustering via Gravitational Attraction and Optimization"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+          - Qi Li
+          - Jun Wang
+        publisher: arXiv (submitted to Knowledge-Based Systems)
+        releaseDate: 2025-01-01
+        url: https://doi.org/10.48550/arXiv.2510.23259
+        summary: arXiv:2510.23259 [cs.LG], under review at Knowledge-Based Systems.
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
+      - title: "ForestFoodKG: A Structured Dataset and Knowledge Graph for Forest Food Taxonomy and Nutrition"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+          - Rongen Yan
+          - Zhidan Chen
+          - Shengqi Zhou
+          - Guoxing Niu
+          - Yan Li
+          - Zehui Liu
+          - Jun Wang
+          - Xinwan Wu
+          - Qi Luo
+          - Yibin Zhou
+          - Yanting Jin
+          - Keyan Liu
+          - Weilong Yuan
+          - Jingyi Xu
+          - Fu Xu
+        publisher: Foods
+        releaseDate: 2025-01-01
+        url: https://doi.org/10.3390/foods14244186
+        summary: Foods 2025, 14(24), 4186; Jun Wang is co-third author.
 
     Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+      - name: "GCAO: Group-driven Clustering via Gravitational Attraction and Optimization"
+        summary: Physics-inspired clustering framework integrating group dynamics and gravitational optimization.
         highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+          - Designed group construction strategies and gravitational potential functions.
+          - Proved algorithm convergence and implemented a complete Python experimental framework.
+          - Evaluated on 11 high-dimensional datasets, improving NMI, ARI, Homogeneity, and ACC by 37.13%, 52.08%, 44.98%, and 38.81% over mainstream baselines.
+        start_date: 2024-11-01
+        end_date: 2025-11-01
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: "FCDNet: Forest Change Detection Network"
+        summary: Multi-scale attention network with dual-temporal remote sensing feature comparison.
+        highlights:
+          - Integrated CBAM with a VGG16 encoder-decoder and a channel switching module.
+          - Optimized loss weighting to alleviate class imbalance.
+          - Achieved 78.51% IoU on test data, a 2.25% improvement over previous SOTA.
+        start_date: 2023-10-01
+        end_date: 2024-12-01
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: "ForestFoodKG: Structured Dataset and Knowledge Graph"
+        summary: Structured dataset and knowledge graph for forest food taxonomy and nutrition.
+        highlights:
+          - Integrated Flora of China and related sources into a standardized data pipeline.
+          - Cleaned text with regular expressions and removed 30% invalid data.
+          - Built a MySQL system managing over 50,000 plant entries.
+        start_date: 2024-03-01
+        end_date: 2024-09-01
+
+      - name: Optimization of UAV LiDAR Forest Volume Estimation Scanning Patterns
+        summary: Terrain-aware optimization of scanning path planning for complex forests.
+        highlights:
+          - Added dynamic weighting with terrain parameters to path planning models.
+          - Reached 92% coverage on complex terrains while reducing scan time by 18%.
+        start_date: 2024-02-01
+        end_date: 2024-12-01
+
+      - name: Multimodal Intelligent Wetland Waterbird Identification and Habitat Monitoring
+        summary: Multimodal recognition pipeline combining image and audio modeling.
+        highlights:
+          - Built image and audio models with EfficientNet-B0, ResNeSt50-fast, PyTorch, MySQL, and Flask.
+          - Achieved 89.7% accuracy (F1-score) on multimodal waterbird identification.
+          - Won national first prize and provincial second prize in related competitions.
+        start_date: 2023-09-01
+        end_date: 2024-06-01
+
+      - name: Forestry Knowledge Q&A Model based on Qwen1.5 and LoRA
+        summary: Domain adaptation for forestry Q&A with lightweight fine-tuning.
+        highlights:
+          - Built a 400-sample QA dataset and fine-tuned Qwen1.5 with LoRA.
+          - Added quantized loading, real-time loss monitoring, TensorBoard, and Gradio streaming Q&A.
+          - Achieved 88% F1-score on domain tests.
+        start_date: 2025-08-01
+        end_date: 2025-09-01
+
+      - name: Locally Deployed RAG Multi-Model Medical Q&A System
+        summary: Local end-to-end RAG stack with flexible model switching and quality evaluation.
+        highlights:
+          - Integrated LangChain, FAISS retrieval, BGE embedding, reranker, Qwen3, and LLaMA3.
+          - Built a Streamlit UI with streaming output, context display, and latency metrics.
+          - Added BERTScore and recall for automatic QA evaluation.
+        start_date: 2025-08-01
+        end_date: 2025-09-01
+
+      - name: Website Development about Artificial Intelligence Introduction
+        summary: Responsive AI science-pop website with interactive frontend components.
+        highlights:
+          - Implemented responsive layouts with HTML/CSS and dynamic effects in JavaScript.
+          - Added WebGL particle backgrounds and optimized load time to 1.5 seconds.
+        start_date: 2024-06-01
+        end_date: 2024-07-01
+
+      - name: Java-web Shopping Mall System
+        summary: High-availability shopping mall system based on the SSM framework.
+        highlights:
+          - Implemented user login, product display, shopping cart, inventory, and payment routing modules.
+          - Improved page rendering performance by 150% with MVC architecture.
+        start_date: 2014-12-01
+        end_date: 2014-12-01
+
+      - name: Library Management System based on MySQL
+        summary: Relational library management system with procedure and trigger automation.
+        highlights:
+          - Designed an ER model in 3NF with 8 core tables and 6 sets of foreign key constraints.
+          - Automated overdue penalties and real-time inventory updates to reduce manual intervention by 90%.
+          - Reduced fuzzy title query time from 3.5s to 0.3s and kept rollback rate under 0.1%.
+        start_date: 2014-12-01
+        end_date: 2014-12-01
+
+    Awards:
+      - title: International Collegiate Programming Contest (ACM-ICPC), Second Prize
+        date: 2022-12-01
+        awarder: ACM-ICPC
+        summary: Ranked in top 15% with optimized C/C++ algorithm implementations and DFS/BFS path-planning solutions.
+
+      - title: National First Prize, Multimedia Application Competition
+        date: 2024-01-01
+        awarder: National-level Competition
+        summary: Awarded for multimodal waterbird identification and habitat monitoring project.
+
+      - title: Provincial Second Prize, Computer Application Design Competition
+        date: 2024-01-01
+        awarder: Provincial-level Competition
+        summary: Awarded for multimodal intelligent waterbird monitoring system.
+
+    Skills:
+      - name: Machine Learning and AI
+        level: Advanced
+        icon: fa-solid fa-hashtag
+        keywords: "Clustering Algorithms, Gravitational Optimization, AI Agents, NLP, CV, Transformers, LangChain, RAG"
+
+      - name: Programming and Engineering
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "Python, PyTorch, Java, C, MySQL, Git, LaTeX"
+
+    Languages:
+      - name: Chinese
+        summary: Native speaker
+
+      - name: English
+        summary: Professional working proficiency
+
+    Interests:
+      - name: Research Interests
+        icon: fa-solid fa-tag
+        keywords: "Clustering Algorithms, Gravitational Optimization, Physics-inspired Machine Learning, Agent-based Systems"
+
+      - name: Personal Interests
+        icon: fa-solid fa-person-hiking
+        keywords: "Surfing, Paragliding, Travel, Guitar, Singing, Skiing, Fitness"
+
+    Volunteer:
+      - company: Student Union, Beijing Forestry University
+        position: Official
+        location: Beijing, China
+        start_date: 2022-09-01
+        end_date: 2026-07-01
+
+      - company: Cycling Association, Beijing Forestry University
+        position: Member
+        location: Beijing, China
+        start_date: 2022-09-01
