@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://kaikkd.github.io/al-folio/sitemap.xml
+Sitemap: https://kaikkd.github.io/sitemap.xml
