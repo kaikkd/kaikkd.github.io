@@ -11,7 +11,9 @@
       body {
         margin: 0;
         color: #494e52;
-        background: #fff;
+        background:
+          radial-gradient(circle at 8% 0%, rgba(34, 75, 141, 0.045), transparent 24rem),
+          linear-gradient(180deg, #ffffff 0%, #fbfcfd 52%, #ffffff 100%);
         font-family: 'Trebuchet MS', Helvetica, sans-serif;
         line-height: 1.5;
       }
@@ -34,8 +36,10 @@
         position: sticky;
         top: 0;
         z-index: 20;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
         border-bottom: 1px solid #f2f3f3;
+        box-shadow: 0 8px 26px rgba(15, 23, 42, 0.035);
         animation: intro 0.3s both;
         animation-delay: 0.15s;
       }
@@ -82,14 +86,19 @@
 
       .masthead__menu-item a {
         display: block;
+        border-radius: 999px;
         padding: 0.5rem 1rem 0.5rem 0;
         color: #7a8288;
         text-decoration: none;
+        transition:
+          color 0.18s ease,
+          transform 0.18s ease;
       }
 
       .masthead__menu-item a:hover {
         color: #51585d;
         text-decoration: none;
+        transform: translateY(-1px);
       }
 
       #main {
@@ -160,6 +169,7 @@
         border-radius: 50%;
         object-fit: cover;
         object-position: center 22%;
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
       }
 
       .author__content {
@@ -278,6 +288,10 @@
         min-width: 0;
       }
 
+      .page__inner-wrap {
+        border-radius: 18px;
+      }
+
       .page__content #about-me {
         margin-top: -10em;
       }
@@ -301,6 +315,16 @@
         font-weight: 700;
         line-height: 1.2;
         border-bottom: 1px solid #f2f3f3;
+      }
+
+      .page__content h1::after {
+        display: block;
+        width: 2.6em;
+        height: 2px;
+        margin-top: 0.5em;
+        content: '';
+        background: linear-gradient(90deg, #224b8d, rgba(34, 75, 141, 0));
+        border-radius: 999px;
       }
 
       .page__content h3 {
@@ -352,21 +376,64 @@
       }
 
       .paper-entry {
-        margin-bottom: 0.82em;
+        padding: 0.9em 1em;
+        margin-bottom: 0.9em;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid #edf0f3;
+        border-radius: 14px;
+        box-shadow: 0 10px 22px rgba(15, 23, 42, 0.035);
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          border-color 0.18s ease;
+      }
+
+      .paper-entry:hover {
+        border-color: rgba(34, 75, 141, 0.18);
+        box-shadow: 0 14px 28px rgba(15, 23, 42, 0.07);
+        transform: translateY(-2px);
+      }
+
+      .paper-title {
+        display: inline-block;
+        margin-bottom: 0.22em;
+        font-size: 1.02em;
+        line-height: 1.42;
+      }
+
+      .paper-authors {
+        color: #5f666b;
+        font-size: 0.96em;
+      }
+
+      .paper-venue {
+        margin-top: 0.12em;
+        color: #c00000;
+        font-size: 0.95em;
       }
 
       .pub-badge {
         display: inline-block;
-        padding: 0.08em 0.42em;
-        margin-left: 0.25em;
+        padding: 0.12em 0.52em;
+        margin-left: 0.35em;
         color: #494e52;
         font-size: 0.78em;
         font-weight: 700;
         line-height: 1.35;
         text-decoration: none;
-        background: #fff;
+        background: #f8fafc;
         border: 1px solid #d9dfe5;
-        border-radius: 4px;
+        border-radius: 999px;
+        vertical-align: 0.08em;
+        transition:
+          background 0.18s ease,
+          border-color 0.18s ease;
+      }
+
+      .pub-badge:hover {
+        background: #eef4ff;
+        border-color: rgba(34, 75, 141, 0.25);
+        text-decoration: none;
       }
 
       .site-note {

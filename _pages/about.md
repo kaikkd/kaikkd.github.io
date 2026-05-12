@@ -74,24 +74,21 @@ _Selected peer-reviewed publications and research manuscripts._
 ### 2025
 
 <div class="paper-entry">
-<span style="font-size: 0.92em;">[**FCDNet: Frequency Curriculum Domain Adaptation Network for Remote Sensing Semantic Segmentation**](https://doi.org/10.1109/TGRS.2025.3631750)</span><br>
-<span style="font-size: 0.869em;">**Jun Wang** et al.</span><br>
-<span style="font-size: 0.87em; color: #c00000;">**IEEE Transactions on Geoscience and Remote Sensing, 2025**</span>
-<a class="pub-badge" href="https://doi.org/10.1109/TGRS.2025.3631750">DOI</a>
+  <a class="paper-title" href="https://doi.org/10.1109/TGRS.2025.3631750"><strong>FCDNet: Frequency Curriculum Domain Adaptation Network for Remote Sensing Semantic Segmentation</strong></a>
+  <div class="paper-authors"><strong>Jun Wang</strong> et al.</div>
+  <div class="paper-venue"><strong>IEEE Transactions on Geoscience and Remote Sensing, 2025</strong> <a class="pub-badge" href="https://doi.org/10.1109/TGRS.2025.3631750">DOI</a></div>
 </div>
 
 <div class="paper-entry">
-<span style="font-size: 0.92em;">[**GCAO: A General Coding Agent Optimization Framework**](https://doi.org/10.48550/arXiv.2510.23259)</span><br>
-<span style="font-size: 0.869em;">**Jun Wang** et al.</span><br>
-<span style="font-size: 0.87em; color: #c00000;">**arXiv, 2025**</span>
-<a class="pub-badge" href="https://doi.org/10.48550/arXiv.2510.23259">DOI</a>
+  <a class="paper-title" href="https://doi.org/10.48550/arXiv.2510.23259"><strong>GCAO: A General Coding Agent Optimization Framework</strong></a>
+  <div class="paper-authors"><strong>Jun Wang</strong> et al.</div>
+  <div class="paper-venue"><strong>arXiv, 2025</strong> <a class="pub-badge" href="https://doi.org/10.48550/arXiv.2510.23259">DOI</a></div>
 </div>
 
 <div class="paper-entry">
-<span style="font-size: 0.92em;">[**ForestFoodKG: Knowledge Graph Construction for Forestry Food Domain QA**](https://doi.org/10.3390/foods14244186)</span><br>
-<span style="font-size: 0.869em;">**Jun Wang** et al.</span><br>
-<span style="font-size: 0.87em; color: #c00000;">**Foods, 2025**</span>
-<a class="pub-badge" href="https://doi.org/10.3390/foods14244186">DOI</a>
+  <a class="paper-title" href="https://doi.org/10.3390/foods14244186"><strong>ForestFoodKG: Knowledge Graph Construction for Forestry Food Domain QA</strong></a>
+  <div class="paper-authors"><strong>Jun Wang</strong> et al.</div>
+  <div class="paper-venue"><strong>Foods, 2025</strong> <a class="pub-badge" href="https://doi.org/10.3390/foods14244186">DOI</a></div>
 </div>
 
 <span class="anchor" id="selected-preprints"></span>
