@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}" class="no-js">
+  <head>
+    {% include head.liquid %}
+    <style>
+      html {
+        scroll-behavior: smooth;
+        font-size: 14px;
+      }
+
+      body {
+        margin: 0;
+        color: #494e52;
+        background: #fff;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+
+      body.fixed-top-nav {
+        padding-top: 0 !important;
+      }
+
+      a {
+        color: #224b8d;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #1a3869;
+        text-decoration: underline;
+      }
+
+      .masthead {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background-color: #fff;
+        border-bottom: 1px solid #f2f3f3;
+        animation: intro 0.3s both;
+        animation-delay: 0.15s;
+      }
+
+      .masthead__inner-wrap {
+        max-width: 1280px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0.5em;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+      }
+
+      .masthead__menu ul {
+        clear: both;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .greedy-nav {
+        position: relative;
+        min-width: 250px;
+        background: #fff;
+      }
+
+      .greedy-nav .visible-links {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+      }
+
+      .masthead__menu-item {
+        display: block;
+        list-style-type: none;
+        white-space: nowrap;
+      }
+
+      .masthead__menu-item--lg {
+        padding-right: 2em;
+        font-weight: 700;
+      }
+
+      .masthead__menu-item a {
+        display: block;
+        padding: 0.5rem 1rem 0.5rem 0;
+        color: #7a8288;
+        text-decoration: none;
+      }
+
+      .masthead__menu-item a:hover {
+        color: #51585d;
+        text-decoration: none;
+      }
+
+      #main {
+        max-width: 1280px;
+        margin: 1em auto 0;
+        padding-right: 1em;
+        padding-left: 1em;
+        animation: intro 0.3s both;
+        animation-delay: 0.35s;
+      }
+
+      #main::after {
+        display: block;
+        clear: both;
+        content: '';
+      }
+
+      .sidebar {
+        transform: translate3d(0, 0, 0);
+        margin-bottom: 1em;
+      }
+
+      .sidebar::after {
+        display: block;
+        clear: both;
+        content: '';
+      }
+
+      .sidebar h2,
+      .sidebar h3,
+      .sidebar h4,
+      .sidebar h5,
+      .sidebar h6 {
+        margin-bottom: 0;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+      }
+
+      .sidebar h3,
+      .sidebar h4 {
+        font-size: 1em;
+      }
+
+      .sidebar p,
+      .sidebar li {
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-size: 1em;
+        line-height: 1.5;
+      }
+
+      .profile_box {
+        display: flex;
+        align-items: center;
+        align-content: flex-start;
+        justify-content: flex-start;
+      }
+
+      .author__avatar-wrap {
+        display: table-cell;
+        width: 75px;
+        vertical-align: top;
+      }
+
+      .author__avatar {
+        display: block;
+        width: 100%;
+        max-width: 175px;
+        min-width: 75px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 22%;
+      }
+
+      .author__content {
+        display: table-cell;
+        min-width: 120px;
+        padding-left: 10px;
+        line-height: 1;
+        vertical-align: top;
+      }
+
+      .author__name {
+        margin: 0;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-size: 1.2em;
+      }
+
+      .author__bio {
+        margin: 0;
+      }
+
+      .author__urls-wrapper {
+        position: relative;
+        z-index: 10;
+        display: table-cell;
+        margin-left: auto;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        vertical-align: middle;
+      }
+
+      .author__urls {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        display: none;
+        margin-top: 15px;
+        padding: 10px;
+        list-style-type: none;
+        background: #fff;
+        border: 1px solid #f2f3f3;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      }
+
+      .author__urls::before {
+        position: absolute;
+        top: -11px;
+        left: calc(50% - 10px);
+        z-index: 0;
+        display: block;
+        width: 0;
+        content: '';
+        border-color: #f2f3f3 transparent;
+        border-style: solid;
+        border-width: 0 10px 10px;
+      }
+
+      .author__urls::after {
+        position: absolute;
+        top: -10px;
+        left: calc(50% - 10px);
+        z-index: 1;
+        display: block;
+        width: 0;
+        content: '';
+        border-color: #fff transparent;
+        border-style: solid;
+        border-width: 0 10px 10px;
+      }
+
+      .author__urls li {
+        white-space: nowrap;
+      }
+
+      .author__urls a {
+        display: block;
+        padding-top: 2px;
+        padding-right: 5px;
+        padding-bottom: 2px;
+        margin-bottom: 5px;
+        color: inherit;
+        font-size: 1em;
+        text-decoration: none;
+      }
+
+      .author__urls a:hover {
+        text-decoration: underline;
+      }
+
+      .author__urls .site-description {
+        margin-bottom: 1em;
+        white-space: normal;
+      }
+
+      .author__urls_sm {
+        display: block;
+        padding: 0.25em;
+        font-size: 1.75em;
+      }
+
+      .author__urls_sm a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .author__urls_sm a:hover {
+        text-decoration: underline;
+      }
+
+      .page {
+        min-width: 0;
+      }
+
+      .page__inner-wrap,
+      .page__content {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .page__content #about-me {
+        margin-top: -10em;
+      }
+
+      .page__content #about-me::before {
+        position: relative;
+        display: block;
+        width: 0;
+        height: 10em;
+        margin-top: -10em;
+        content: '';
+      }
+
+      .page__content h1 {
+        padding-bottom: 0.5em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        color: #494e52;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-size: 1.563em;
+        font-weight: 700;
+        line-height: 1.2;
+        border-bottom: 1px solid #f2f3f3;
+      }
+
+      .page__content h3 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        color: #494e52;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-size: 1.2em;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .page__content p,
+      .page__content li,
+      .page__content dl {
+        font-size: 1.1em;
+      }
+
+      .page__content p {
+        margin: 0 0 0.5em;
+      }
+
+      .page__content ul {
+        margin-top: 0;
+      }
+
+      .page__content a {
+        text-decoration: underline;
+      }
+
+      .page__content a:hover {
+        text-decoration: underline;
+      }
+
+      .inline-logo {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.25em;
+        color: #224b8d;
+        font-size: 0.9em;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1em;
+        text-align: center;
+        vertical-align: -0.08em;
+        background: #f2f3f3;
+        border-radius: 2px;
+      }
+
+      .paper-entry {
+        margin-bottom: 0.82em;
+      }
+
+      .pub-badge {
+        display: inline-block;
+        padding: 0.08em 0.42em;
+        margin-left: 0.25em;
+        color: #494e52;
+        font-size: 0.78em;
+        font-weight: 700;
+        line-height: 1.35;
+        text-decoration: none;
+        background: #fff;
+        border: 1px solid #d9dfe5;
+        border-radius: 4px;
+      }
+
+      .site-note {
+        padding-top: 1em;
+        margin: 3em 0 1em;
+        color: #7a8288;
+        font-size: 0.9em;
+        text-align: center;
+        border-top: 1px solid #f2f3f3;
+      }
+
+      @media (min-width: 925px) {
+        .sidebar {
+          position: sticky;
+          top: 3.7em;
+          float: left;
+          width: 15.2542372881%;
+          opacity: 1;
+          transition: opacity 0.2s ease-in-out;
+        }
+
+        .profile_box {
+          display: block;
+        }
+
+        .author__avatar-wrap {
+          display: block;
+          width: auto;
+          height: auto;
+        }
+
+        .author__avatar {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 5px;
+          border: 1px solid #f2f3f3;
+        }
+
+        .author__content {
+          display: block;
+          width: 100%;
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        .author__name {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-size: 1.4em;
+        }
+
+        .author__bio {
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+
+        .author__urls-wrapper {
+          display: block;
+        }
+
+        .author__urls {
+          position: relative;
+          z-index: auto;
+          display: block;
+          padding: 0;
+          margin: 0;
+          background: transparent;
+          border: 0;
+          box-shadow: none;
+        }
+
+        .author__urls::before,
+        .author__urls::after {
+          display: none;
+        }
+
+        .author__urls_sm {
+          display: none;
+        }
+
+        .page {
+          float: right;
+          width: 83.0508474576%;
+          padding-left: 4.2372881356%;
+        }
+      }
+
+      @media (max-width: 924px) {
+        .masthead__inner-wrap {
+          padding: 0.35em 0.85em;
+        }
+
+        .greedy-nav .visible-links {
+          overflow-x: auto;
+        }
+
+        .masthead__menu-item a {
+          padding-right: 0.85rem;
+        }
+
+        #main {
+          margin-top: 0.75em;
+        }
+
+        .sidebar {
+          position: relative;
+        }
+
+        .author__urls-wrapper:hover .author__urls,
+        .author__urls-wrapper:focus-within .author__urls {
+          display: block;
+        }
+      }
+
+      @media (max-width: 720px) {
+        html {
+          font-size: 13px;
+        }
+
+        .profile_box {
+          align-items: flex-start;
+        }
+
+        .author__avatar-wrap {
+          width: 88px;
+        }
+
+        .author__content {
+          padding-top: 0.2em;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .masthead__menu-item--lg {
+          padding-right: 0.75em;
+        }
+
+        .masthead__menu-item a {
+          padding-right: 0.75rem;
+          font-size: 0.92em;
+        }
+
+        #main {
+          padding-right: 0.75em;
+          padding-left: 0.75em;
+        }
+      }
+
+      @keyframes intro {
+        0% {
+          opacity: 0;
+          transform: translateY(5px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
+            <ul class="visible-links">
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="#about-me">Homepage</a></li>
+              <li class="masthead__menu-item"><a href="#about-me">About me</a></li>
+              <li class="masthead__menu-item"><a href="#news">News</a></li>
+              <li class="masthead__menu-item"><a href="#education">Education</a></li>
+              <li class="masthead__menu-item"><a href="#experiences">Experiences</a></li>
+              <li class="masthead__menu-item"><a href="#honors-awards">Honors & Awards</a></li>
+              <li class="masthead__menu-item"><a href="#publications">Selected Publications</a></li>
+              <li class="masthead__menu-item"><a href="#selected-preprints">Selected Preprints</a></li>
+              <li class="masthead__menu-item"><a href="#invited-talks">Invited Talks</a></li>
+              <li class="masthead__menu-item"><a href="#academic-services">Academic Services</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="http://schema.org/Person" class="profile_box">
+          <div class="author__avatar-wrap">
+            <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" class="author__avatar" alt="Jun Wang">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name">Jun Wang</h3>
+            <p class="author__bio">UC San Diego CSE CS75 Project</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <ul class="author__urls social-icons">
+              <li><div class="site-description">AI Agents; Evaluation; Applied Machine Learning</div></li>
+              <li><i class="fa-solid fa-fw fa-location-dot" aria-hidden="true"></i> San Diego, CA</li>
+              <li><i class="fa-solid fa-fw fa-building-columns" aria-hidden="true"></i> UC San Diego</li>
+              <li>
+                <a href="mailto:wangjun170417@163.com"><i class="fa-solid fa-fw fa-envelope" aria-hidden="true"></i> Email</a>
+              </li>
+              <li>
+                <a href="https://github.com/kaikkd"><i class="fa-brands fa-fw fa-github" aria-hidden="true"></i> Github</a>
+              </li>
+              <li>
+                <a href="https://scholar.google.com/"><i class="fa-solid fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a>
+              </li>
+            </ul>
+            <div class="author__urls_sm">
+              <a href="mailto:wangjun170417@163.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+              <a href="https://github.com/kaikkd" aria-label="Github"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              <a href="https://scholar.google.com/" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <div class="page__inner-wrap">
+          <section class="page__content" itemprop="text">{{ content }}</section>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
