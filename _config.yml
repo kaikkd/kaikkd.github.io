@@ -9,12 +9,12 @@ last_name: Wang
 contact_note: >
   Email is the fastest way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Organizing the world's data through the lens of physics.
+  Jun Wang's academic homepage for AI agents, evaluation, and applied machine learning.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jun wang, kaik d, machine learning, clustering, gravitational optimization, ai agents # add your own keywords or leave empty
+keywords: jun wang, kaik d, uc san diego, cse cs75, ai agents, llm evaluation, rag, multimodal ai # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -91,8 +91,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Jun Wang # blog_name will be displayed in your blog page
+blog_description: notes on AI systems, agents, and engineering
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
