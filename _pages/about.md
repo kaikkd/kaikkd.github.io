@@ -14,7 +14,7 @@ social: false
 
 # About Me
 
-I am currently participating in the [UC San Diego](https://ucsd.edu/) **CSE CS75 Project**. My work focuses on practical AI systems for coding agents, tool-use workflows, model evaluation, and multimodal understanding.
+I am currently an Agent Development / Evaluation intern at **ByteDance**, working on practical AI systems for coding agents, tool-use workflows, model evaluation, and multimodal understanding. I will begin the [UC San Diego](https://ucsd.edu/) **CSE CS75 Project** in September 2026.
 
 I received my B.Eng. in Computer Science and Technology from [Beijing Forestry University](https://www.bjfu.edu.cn/). I have built applied systems across LLM agents, RAG, evaluation pipelines, and multimodal recognition, with engineering experience in Python, PyTorch, Docker, Git, MySQL, Java, and C.
 
@@ -30,16 +30,16 @@ My long-term goal is to build reliable AI systems that can solve real engineerin
 
 # 🔥 News
 
-- _2026.03_: Started the **UC San Diego CSE CS75 Project**.
+- _2026.09_: Will begin the **UC San Diego CSE CS75 Project**.
 - _2025.12_: Built a ReAct-style coding agent with tool execution, sandbox feedback, and iterative repair.
-- _2025.08_: Started internship work at **ByteDance**, focusing on agent development and evaluation.
+- _2025.08 - 2026.07_: Internship at **ByteDance**, focusing on agent development and evaluation.
 - _2025_: **FCDNet** was published in _IEEE Transactions on Geoscience and Remote Sensing_.
 
 <span class="anchor" id="education"></span>
 
 # 📖 Education
 
-- <span style="font-size: 0.92em;">**2026.03 - Present** | <span class="inline-logo">U</span> **UC San Diego CSE CS75 Project**</span><br>
+- <span style="font-size: 0.92em;">**2026.09 - 2027.12** | <span class="inline-logo">U</span> **M.S. / CSE CS75 Project**</span><br>
   University of California San Diego
 
 - <span style="font-size: 0.92em;">**2022.09 - 2026.06** | <span class="inline-logo">B</span> **B.Eng. in Computer Science and Technology**</span><br>
@@ -49,7 +49,7 @@ My long-term goal is to build reliable AI systems that can solve real engineerin
 
 # 💻 Research Experience
 
-- <span style="font-size: 0.92em;">**2025.08 - Present** | **ByteDance, Agent Development / Evaluation**</span><br>
+- <span style="font-size: 0.92em;">**2025.08 - 2026.07** | **ByteDance, Agent Development / Evaluation Intern**</span><br>
   <span style="font-size: 0.869em;">- Built and evaluated LLM agent workflows with tool calling, benchmark instrumentation, and execution feedback.<br>- Worked on practical coding-agent behavior, failure analysis, and iterative improvement loops.</span>
 
 - <span style="font-size: 0.92em;">**2024.10 - 2024.12** | **LargeV Instrument, AI Algorithm Intern**</span><br>
@@ -108,12 +108,6 @@ _Representative projects, preprints, and technical reports._
 
 - <span style="font-size: 0.92em;">**Multimodal Waterbird Recognition System**</span><br>
   <span style="font-size: 0.869em;">An applied recognition system for multimodal classification and practical deployment.</span>
-
-<span class="anchor" id="invited-talks"></span>
-
-# 🎤 Invited Talks
-
-- _Available upon request._
 
 <span class="anchor" id="academic-services"></span>
 
