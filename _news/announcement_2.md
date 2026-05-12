@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Submitted our GCAO paper to Knowledge-Based Systems. A year of gravitational clustering distilled into one manuscript. Fingers crossed.
+Completed and open-sourced a multi-stage coding agent pipeline with planning, tool-use, and critic-based correction.

@@ -1,63 +1,53 @@
 cv:
   name: Jun Wang
-  label: Incoming MSCS student at UCSD (Fall 2026)
+  label: UC San Diego CSE CS75 Project
   email: wangjun170417@163.com
   location: Beijing, China
   image: ""
   summary: >
-    Incoming M.S. student in Computer Science at UCSD (Fall 2026), with research interests in
-    clustering algorithms, gravitational optimization, and AI agent systems. I enjoy building
-    practical ML pipelines and physics-inspired optimization methods for complex data.
+    I build practical AI systems for coding agents, tool-use evaluation,
+    retrieval-augmented generation, and multimodal benchmarks.
 
   social_networks:
     - network: GitHub
       username: kaikkd
 
-  address:
-    street: No. 35, Qinghua East Road, Haidian District
-    city: Beijing
-    region: Beijing
-    postalCode: 100083
-    countryCode: CN
-
   sections:
     Education:
       - institution: University of California, San Diego
         location: San Diego, CA, USA
-        area: Computer Science
-        studyType: Master of Science
-        start_date: 2026-09-01
+        area: CSE CS75 Project
+        studyType: Project-based Program
+        start_date: 2026-01-01
         highlights:
-          - Incoming student for Fall 2026.
+          - Current project participant.
 
       - institution: Beijing Forestry University
         location: Beijing, China
-        area: Urban Forestry (Major), Computer Science and Technology (Minor)
-        studyType: Bachelor of Agriculture
+        area: Computer Science and Technology
+        studyType: Bachelor of Engineering
         start_date: 2022-09-01
-        end_date: 2026-07-01
-        score: 84.19/100
+        end_date: 2026-06-01
 
     Experience:
       - company: ByteDance
-        position: Agent Automated Evaluation Engineer
+        position: Agent Development / Evaluation
         location: Beijing, China
         start_date: 2025-08-01
         highlights:
-          - Led full-stack development of a developer-facing coding agent system from prompt input to visual interface output.
-          - Implemented real-time streaming rendering with WebSocket/SSE and multi-turn instruction parsing, reducing end-to-end latency by 40%.
-          - Designed and launched an automated evaluation system with a 150-task benchmark for code generation and reasoning.
-          - Improved code generation success rate by 12% and reduced single-round evaluation time from 6 hours to 1 hour.
+          - Integrated BFCLv4 into internal evaluation workflows for automated function-calling assessment.
+          - Built distributed Docker sandbox execution to improve stability and isolation.
+          - Designed multi-turn agent interaction and session state management for long-context tasks.
+          - Reproduced VLM benchmark pipelines and implemented LLM/VLM metrics such as factuality, BON, and WON.
 
       - company: LargeV Instrument Corp., Ltd.
-        position: Data Analyst Intern
+        position: AI Algorithm Intern
         location: Beijing, China
         start_date: 2024-10-01
         end_date: 2024-12-01
         highlights:
-          - Built a Python-based automated pipeline for over 15,000 dental CT images using OpenCV and Pydicom, improving data quality by 70%.
-          - Developed labeling consistency analysis with ANOVA and clustering, reducing rework rate by 45%.
-          - Optimized SAM+MedLSAM prompt encoder in PyTorch for oral imaging and reached 0.92 Dice score.
+          - Applied YOLO models on oral scan datasets and improved model quality through tuning and data processing.
+          - Integrated model-assisted annotation workflow to reduce manual labeling effort.
 
     Publications:
       - title: "FCDNet: A Multi-Scale Attention Network for Forest Change Detection Using Dual-Temporal Very-High-Resolution Remote Sensing Images"
@@ -70,16 +60,14 @@ cv:
         publisher: IEEE Transactions on Geoscience and Remote Sensing
         releaseDate: 2025-01-01
         url: https://doi.org/10.1109/TGRS.2025.3631750
-        summary: Published in TGRS, volume 63, article 4422515.
 
       - title: "GCAO: Group-driven Clustering via Gravitational Attraction and Optimization"
         authors:
           - Qi Li
           - Jun Wang
-        publisher: arXiv (submitted to Knowledge-Based Systems)
+        publisher: arXiv
         releaseDate: 2025-01-01
         url: https://doi.org/10.48550/arXiv.2510.23259
-        summary: arXiv:2510.23259 [cs.LG], under review at Knowledge-Based Systems.
 
       - title: "ForestFoodKG: A Structured Dataset and Knowledge Graph for Forest Food Taxonomy and Nutrition"
         authors:
@@ -90,158 +78,71 @@ cv:
           - Yan Li
           - Zehui Liu
           - Jun Wang
-          - Xinwan Wu
-          - Qi Luo
-          - Yibin Zhou
-          - Yanting Jin
-          - Keyan Liu
-          - Weilong Yuan
-          - Jingyi Xu
-          - Fu Xu
         publisher: Foods
         releaseDate: 2025-01-01
         url: https://doi.org/10.3390/foods14244186
-        summary: Foods 2025, 14(24), 4186; Jun Wang is co-third author.
 
     Projects:
-      - name: "GCAO: Group-driven Clustering via Gravitational Attraction and Optimization"
-        summary: Physics-inspired clustering framework integrating group dynamics and gravitational optimization.
+      - name: "Code Agent Bot"
+        summary: Autonomous coding agent with planner-analyzer-critic workflow.
         highlights:
-          - Designed group construction strategies and gravitational potential functions.
-          - Proved algorithm convergence and implemented a complete Python experimental framework.
-          - Evaluated on 11 high-dimensional datasets, improving NMI, ARI, Homogeneity, and ACC by 37.13%, 52.08%, 44.98%, and 38.81% over mainstream baselines.
-        start_date: 2024-11-01
-        end_date: 2025-11-01
+          - ReAct-based planning and dynamic replanning from runtime feedback.
+          - MCP-aligned tool integration and chained execution with verification.
+          - Critic-based self-correction for better long-task robustness.
+        start_date: 2025-12-01
+        end_date: 2026-01-01
 
-      - name: "FCDNet: Forest Change Detection Network"
-        summary: Multi-scale attention network with dual-temporal remote sensing feature comparison.
+      - name: "Medical RAG QA System"
+        summary: Retrieval-augmented QA with multi-model backend and quality evaluation.
         highlights:
-          - Integrated CBAM with a VGG16 encoder-decoder and a channel switching module.
-          - Optimized loss weighting to alleviate class imbalance.
-          - Achieved 78.51% IoU on test data, a 2.25% improvement over previous SOTA.
-        start_date: 2023-10-01
-        end_date: 2024-12-01
+          - Two-stage retrieval with FAISS and reranker.
+          - Model-agnostic inference layer with streaming UI.
+          - Automated quality evaluation with retrieval and answer metrics.
+        start_date: 2025-07-01
+        end_date: 2025-08-01
 
-      - name: "ForestFoodKG: Structured Dataset and Knowledge Graph"
-        summary: Structured dataset and knowledge graph for forest food taxonomy and nutrition.
+      - name: "LoRA Forestry QA"
+        summary: Domain-adapted Qwen QA model with lightweight fine-tuning.
         highlights:
-          - Integrated Flora of China and related sources into a standardized data pipeline.
-          - Cleaned text with regular expressions and removed 30% invalid data.
-          - Built a MySQL system managing over 50,000 plant entries.
-        start_date: 2024-03-01
-        end_date: 2024-09-01
+          - Built domain QA dataset and LoRA fine-tuning workflow.
+          - Added interactive streaming UI for demo and testing.
+        start_date: 2025-08-01
+        end_date: 2025-09-01
 
-      - name: Optimization of UAV LiDAR Forest Volume Estimation Scanning Patterns
-        summary: Terrain-aware optimization of scanning path planning for complex forests.
+      - name: "Multimodal Waterbird Recognition"
+        summary: Image-audio recognition workflow with backend service deployment.
         highlights:
-          - Added dynamic weighting with terrain parameters to path planning models.
-          - Reached 92% coverage on complex terrains while reducing scan time by 18%.
-        start_date: 2024-02-01
-        end_date: 2024-12-01
-
-      - name: Multimodal Intelligent Wetland Waterbird Identification and Habitat Monitoring
-        summary: Multimodal recognition pipeline combining image and audio modeling.
-        highlights:
-          - Built image and audio models with EfficientNet-B0, ResNeSt50-fast, PyTorch, MySQL, and Flask.
-          - Achieved 89.7% accuracy (F1-score) on multimodal waterbird identification.
-          - Won national first prize and provincial second prize in related competitions.
+          - Trained multimodal models and deployed inference API.
         start_date: 2023-09-01
-        end_date: 2024-06-01
-
-      - name: Forestry Knowledge Q&A Model based on Qwen1.5 and LoRA
-        summary: Domain adaptation for forestry Q&A with lightweight fine-tuning.
-        highlights:
-          - Built a 400-sample QA dataset and fine-tuned Qwen1.5 with LoRA.
-          - Added quantized loading, real-time loss monitoring, TensorBoard, and Gradio streaming Q&A.
-          - Achieved 88% F1-score on domain tests.
-        start_date: 2025-08-01
-        end_date: 2025-09-01
-
-      - name: Locally Deployed RAG Multi-Model Medical Q&A System
-        summary: Local end-to-end RAG stack with flexible model switching and quality evaluation.
-        highlights:
-          - Integrated LangChain, FAISS retrieval, BGE embedding, reranker, Qwen3, and LLaMA3.
-          - Built a Streamlit UI with streaming output, context display, and latency metrics.
-          - Added BERTScore and recall for automatic QA evaluation.
-        start_date: 2025-08-01
-        end_date: 2025-09-01
-
-      - name: Website Development about Artificial Intelligence Introduction
-        summary: Responsive AI science-pop website with interactive frontend components.
-        highlights:
-          - Implemented responsive layouts with HTML/CSS and dynamic effects in JavaScript.
-          - Added WebGL particle backgrounds and optimized load time to 1.5 seconds.
-        start_date: 2024-06-01
-        end_date: 2024-07-01
-
-      - name: Java-web Shopping Mall System
-        summary: High-availability shopping mall system based on the SSM framework.
-        highlights:
-          - Implemented user login, product display, shopping cart, inventory, and payment routing modules.
-          - Improved page rendering performance by 150% with MVC architecture.
-        start_date: 2014-12-01
-        end_date: 2014-12-01
-
-      - name: Library Management System based on MySQL
-        summary: Relational library management system with procedure and trigger automation.
-        highlights:
-          - Designed an ER model in 3NF with 8 core tables and 6 sets of foreign key constraints.
-          - Automated overdue penalties and real-time inventory updates to reduce manual intervention by 90%.
-          - Reduced fuzzy title query time from 3.5s to 0.3s and kept rollback rate under 0.1%.
-        start_date: 2014-12-01
-        end_date: 2014-12-01
+        end_date: 2024-03-01
 
     Awards:
-      - title: International Collegiate Programming Contest (ACM-ICPC), Second Prize
-        date: 2022-12-01
-        awarder: ACM-ICPC
-        summary: Ranked in top 15% with optimized C/C++ algorithm implementations and DFS/BFS path-planning solutions.
-
       - title: National First Prize, Multimedia Application Competition
         date: 2024-01-01
         awarder: National-level Competition
-        summary: Awarded for multimodal waterbird identification and habitat monitoring project.
 
-      - title: Provincial Second Prize, Computer Application Design Competition
+      - title: ACM Programming Competition Silver Award
         date: 2024-01-01
-        awarder: Provincial-level Competition
-        summary: Awarded for multimodal intelligent waterbird monitoring system.
+        awarder: Beijing Forestry University
+
+      - title: TOEFL 103
+        date: 2025-01-01
+        awarder: ETS
 
     Skills:
-      - name: Machine Learning and AI
+      - name: AI and ML
         level: Advanced
         icon: fa-solid fa-hashtag
-        keywords: "Clustering Algorithms, Gravitational Optimization, AI Agents, NLP, CV, Transformers, LangChain, RAG"
+        keywords: "Agent Systems, LLM Evaluation, VLM Benchmark, RAG, NLP, CV"
 
-      - name: Programming and Engineering
+      - name: Engineering
         level: Advanced
         icon: fa-solid fa-code
-        keywords: "Python, PyTorch, Java, C, MySQL, Git, LaTeX"
+        keywords: "Python, PyTorch, Docker, LangChain, Streamlit, Git"
 
     Languages:
       - name: Chinese
-        summary: Native speaker
+        summary: Native
 
       - name: English
         summary: Professional working proficiency
-
-    Interests:
-      - name: Research Interests
-        icon: fa-solid fa-tag
-        keywords: "Clustering Algorithms, Gravitational Optimization, Physics-inspired Machine Learning, Agent-based Systems"
-
-      - name: Personal Interests
-        icon: fa-solid fa-person-hiking
-        keywords: "Surfing, Paragliding, Travel, Guitar, Singing, Skiing, Fitness"
-
-    Volunteer:
-      - company: Student Union, Beijing Forestry University
-        position: Official
-        location: Beijing, China
-        start_date: 2022-09-01
-        end_date: 2026-07-01
-
-      - company: Cycling Association, Beijing Forestry University
-        position: Member
-        location: Beijing, China
-        start_date: 2022-09-01
