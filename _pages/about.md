@@ -1,567 +1,557 @@
 ---
 layout: default
 permalink: /
-title: Home
+title: ""
+excerpt: ""
 description: "Jun Wang's academic homepage"
-
 announcements:
   enabled: false
-
 selected_papers: false
 social: false
 ---
 
 <style>
 html { scroll-behavior: smooth; }
-
 body {
-  background: var(--global-bg-color, #fff);
+  margin: 0;
+  color: #494e52;
+  background: #fff;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
 }
-
-.container.mt-5 {
-  max-width: 1180px !important;
-  padding-left: 22px !important;
-  padding-right: 22px !important;
+body.fixed-top-nav { padding-top: 0 !important; }
+body > header,
+body > footer { display: none !important; }
+.container.mt-5[role="main"] {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
-
-.navbar .container {
-  max-width: 1180px;
-}
-
-.hp {
-  display: grid;
-  grid-template-columns: 250px minmax(0, 1fr) 164px;
-  gap: 34px;
-  align-items: start;
-}
-
-.hp-side {
+a { color: #224b8d; }
+a:hover { color: #1a3869; }
+.dg-masthead {
   position: sticky;
-  top: 86px;
-  padding-top: 4px;
-  text-align: center;
+  top: 0;
+  z-index: 20;
+  background: #fff;
+  border-bottom: 1px solid #f2f3f3;
+  animation: dgIntro .3s both;
+  animation-delay: .15s;
 }
-
-.hp-side .avatar {
-  width: 168px;
-  height: 168px;
+.dg-masthead__inner-wrap {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .5em;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.dg-masthead__menu ul {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dg-greedy-nav {
+  position: relative;
+  min-width: 250px;
+  background: #fff;
+}
+.dg-greedy-nav .visible-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.dg-greedy-nav a {
+  display: block;
+  margin: 0 1rem 0 0;
+  padding: .5rem 0;
+  color: #7a8288;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dg-greedy-nav a:hover { color: #51585d; }
+.dg-masthead__menu-item {
+  display: block;
+  white-space: nowrap;
+}
+.dg-masthead__menu-item--lg {
+  padding-right: 2em;
+  font-weight: 700;
+}
+#dg-main {
+  max-width: 1280px;
+  margin: 1em auto 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  animation: dgIntro .3s both;
+  animation-delay: .35s;
+}
+#dg-main::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.dg-sidebar {
+  transform: translate3d(0, 0, 0);
+  margin-bottom: 1em;
+}
+.dg-sidebar::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.dg-sidebar h2,
+.dg-sidebar h3,
+.dg-sidebar h4,
+.dg-sidebar h5,
+.dg-sidebar h6 {
+  margin-bottom: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.dg-sidebar h3,
+.dg-sidebar h4 { font-size: 1em; }
+.dg-sidebar p,
+.dg-sidebar li {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.dg-profile_box {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+}
+.dg-author__avatar-wrap {
+  display: table-cell;
+  width: 75px;
+  vertical-align: top;
+}
+.dg-author__avatar {
+  display: block;
+  width: 100%;
+  max-width: 175px;
+  min-width: 75px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 22%;
-  display: block;
-  margin: 0 auto 14px;
-  border: 1px solid var(--global-divider-color, #dedede);
 }
-
-.hp-side .name {
+.dg-author__content {
+  display: table-cell;
+  min-width: 120px;
+  padding-left: 10px;
+  line-height: 1;
+  vertical-align: top;
+}
+.dg-author__name {
   margin: 0;
-  font-size: 1.18rem;
-  font-weight: 700;
-  line-height: 1.25;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1.2em;
 }
-
-.hp-side .name-cn {
-  margin: 2px 0 10px;
-  font-size: 0.86rem;
-  color: var(--global-text-color-light, #777);
+.dg-author__bio { margin: 0; }
+.dg-author__urls-wrapper {
+  position: relative;
+  z-index: 10;
+  display: table-cell;
+  margin-left: auto;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  vertical-align: middle;
 }
-
-.hp-side .role {
-  margin: 0 0 12px;
-  font-size: 0.82rem;
-  line-height: 1.45;
-  color: var(--global-text-color-light, #666);
-}
-
-.hp-side .keywords {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  justify-content: center;
-  margin-bottom: 13px;
-}
-
-.hp-side .keywords span {
-  padding: 2px 8px;
-  border-radius: 12px;
-  background: var(--global-code-bg-color, #f2f2f2);
-  font-size: 0.68rem;
-  color: var(--global-text-color, #333);
-}
-
-.hp-side .meta {
-  margin: 0 0 14px;
-  font-size: 0.78rem;
-  color: var(--global-text-color-light, #777);
-}
-
-.hp-side .links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
-}
-
-.hp-side .links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: var(--global-text-color, #333);
-  font-size: 0.79rem;
-  opacity: 0.72;
-  text-decoration: none;
-}
-
-.hp-side .links a:hover {
-  color: var(--global-theme-color, #2698ba);
-  opacity: 1;
-}
-
-.hp-side .links i {
-  width: 15px;
-  text-align: center;
-}
-
-.hp-main {
-  min-width: 0;
-  line-height: 1.68;
-}
-
-.hp-main section {
-  margin-bottom: 2.1rem;
-}
-
-.hp-main h2 {
-  margin: 0 0 0.72rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--global-divider-color, #e6e6e6);
-  font-size: 1.23rem;
-  font-weight: 600;
-}
-
-.hp-main h3 {
-  margin: 1.1rem 0 0.35rem;
-  font-size: 0.98rem;
-  font-weight: 600;
-}
-
-.hp-main p,
-.hp-main li {
-  font-size: 0.94rem;
-}
-
-.hp-main p {
-  margin: 0 0 0.8rem;
-}
-
-.hp-main ul {
-  margin: 0.35rem 0 0;
-  padding-left: 1.15rem;
-}
-
-.news-list {
+.dg-author__urls {
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  margin-top: 15px;
+  padding: 10px;
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.news-list li {
-  margin-bottom: 0.32rem;
-  line-height: 1.6;
-}
-
-.news-list strong {
-  font-weight: 600;
-  color: var(--global-theme-color, #2698ba);
-}
-
-.tl {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.tl > li {
-  display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  column-gap: 18px;
-  margin-bottom: 1rem;
-}
-
-.tl .date {
-  font-size: 0.82rem;
-  color: var(--global-text-color-light, #777);
-  line-height: 1.5;
-}
-
-.tl .title {
-  font-weight: 600;
-  line-height: 1.45;
-}
-
-.tl .sub {
-  margin-top: 1px;
-  font-size: 0.88rem;
-  color: var(--global-text-color-light, #666);
-}
-
-.tl ul {
-  margin-top: 0.26rem;
-  padding-left: 1rem;
-}
-
-.paper,
-.project {
-  margin-bottom: 1rem;
-}
-
-.paper .p-title,
-.project .p-title {
-  font-weight: 600;
-  line-height: 1.45;
-}
-
-.paper .p-authors,
-.project .p-desc {
-  margin-top: 2px;
-  font-size: 0.86rem;
-  color: var(--global-text-color-light, #666);
-  line-height: 1.5;
-}
-
-.paper .p-meta,
-.project .p-meta {
-  margin-top: 2px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  align-items: center;
-  font-size: 0.76rem;
-}
-
-.badge-soft {
-  display: inline-block;
-  padding: 1px 7px;
+  border: 1px solid #f2f3f3;
   border-radius: 4px;
-  background: var(--global-code-bg-color, #f2f2f2);
-  color: var(--global-text-color, #333);
-  font-weight: 600;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.25);
 }
-
-.link-bracket a {
-  margin-right: 2px;
-}
-
-.link-bracket a::before { content: "["; }
-.link-bracket a::after { content: "]"; }
-
-.award-list {
-  padding-left: 1.1rem;
-  margin: 0;
-}
-
-.award-list li {
-  margin-bottom: 0.35rem;
-}
-
-.hp-toc {
-  position: sticky;
-  top: 88px;
-}
-
-.hp-toc ul {
-  list-style: none;
-  margin: 0;
-  padding: 0 0 0 12px;
-  border-left: 2px solid var(--global-divider-color, #e2e2e2);
-}
-
-.hp-toc li {
-  margin-bottom: 6px;
-}
-
-.hp-toc a {
+.dg-author__urls::before {
   display: block;
-  color: var(--global-text-color, #333);
-  font-size: 0.72rem;
-  line-height: 1.35;
-  opacity: 0.48;
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: calc(50% - 10px);
+  width: 0;
+  border-style: solid;
+  border-width: 0 10px 10px;
+  border-color: #f2f3f3 transparent;
+  z-index: 0;
+}
+.dg-author__urls::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 10px);
+  width: 0;
+  border-style: solid;
+  border-width: 0 10px 10px;
+  border-color: #fff transparent;
+  z-index: 1;
+}
+.dg-author__urls li { white-space: nowrap; }
+.dg-author__urls a {
+  display: block;
+  margin-bottom: 5px;
+  padding: 2px 5px 2px 0;
+  color: inherit;
+  font-size: 1em;
   text-decoration: none;
 }
-
-.hp-toc a:hover,
-.hp-toc a.active {
-  color: var(--global-theme-color, #2698ba);
-  opacity: 1;
+.dg-author__urls a:hover { text-decoration: underline; }
+.dg-author__urls .dg-desc {
+  white-space: normal;
+  margin-bottom: 1em;
 }
-
-.hp-footer {
-  margin-top: 3rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--global-divider-color, #e6e6e6);
+.dg-author__urls_sm {
+  display: block;
+  padding: .25em;
+  font-size: 1.75em;
+}
+.dg-author__urls_sm a {
+  color: inherit;
+  text-decoration: none;
+}
+.dg-author__urls_sm a:hover { text-decoration: underline; }
+.dg-page {
+  min-width: 0;
+}
+.dg-page__inner-wrap,
+.dg-page__content {
+  width: 100%;
+  min-width: 0;
+}
+.dg-page__content #about-me {
+  margin-top: -10em;
+}
+.dg-page__content #about-me::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0;
+  height: 10em;
+  margin-top: -10em;
+}
+.dg-page__content h1 {
+  margin-top: 1em;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #f2f3f3;
+  color: #494e52;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1.563em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.dg-page__content h3 {
+  margin-top: 1em;
+  margin-bottom: .5em;
+  color: #494e52;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.dg-page__content p,
+.dg-page__content li,
+.dg-page__content dl {
+  font-size: 1.1em;
+}
+.dg-page__content p { margin: 0 0 .5em; }
+.dg-page__content ul { margin-top: 0; }
+.dg-page__content a { text-decoration: underline; }
+.dg-page__content a:hover { text-decoration: underline; }
+.dg-page__content .small { font-size: 1em; }
+.dg-page__content .dg-inline-logo {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: .25em;
+  border-radius: 2px;
+  background: #f2f3f3;
+  color: #224b8d;
+  font-size: .9em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1em;
   text-align: center;
-  color: var(--global-text-color-light, #777);
-  font-size: 0.78rem;
+  vertical-align: -0.08em;
 }
-
-@media (max-width: 1060px) {
-  .hp {
-    grid-template-columns: 235px minmax(0, 1fr);
-    gap: 30px;
-  }
-
-  .hp-toc { display: none; }
+.dg-page__content .dg-badge {
+  display: inline-block;
+  margin-left: .25em;
+  padding: .08em .42em;
+  border: 1px solid #d9dfe5;
+  border-radius: 4px;
+  color: #494e52;
+  background: #fff;
+  font-size: .78em;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
 }
-
-@media (max-width: 768px) {
-  .container.mt-5 {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+.dg-page__content .dg-red { color: #c00000; }
+.dg-page__content .dg-muted { color: #7a8288; }
+.dg-page__content .dg-paper { margin-bottom: .82em; }
+.dg-page__content .dg-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .5em 1.2em;
+  padding-left: 1.2em;
+}
+.dg-footer-note {
+  margin: 3em 0 1em;
+  padding-top: 1em;
+  border-top: 1px solid #f2f3f3;
+  color: #7a8288;
+  font-size: .9em;
+  text-align: center;
+}
+@media (min-width: 925px) {
+  .dg-sidebar {
+    position: sticky;
+    top: 3.7em;
+    float: left;
+    width: 15.2542372881%;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
   }
-
-  .hp {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .hp-side {
-    position: static;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.4rem;
-    border-bottom: 1px solid var(--global-divider-color, #e6e6e6);
-  }
-
-  .hp-side .avatar {
-    width: 128px;
-    height: 128px;
-  }
-
-  .hp-side .links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .tl {
+  .dg-profile_box { display: block; }
+  .dg-author__avatar-wrap {
     display: block;
+    width: auto;
+    height: auto;
   }
-
-  .tl > li {
+  .dg-author__avatar {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #f2f3f3;
+  }
+  .dg-author__content {
     display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
   }
-
-  .tl .date {
-    margin-bottom: 2px;
+  .dg-author__name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
   }
+  .dg-author__bio {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .dg-author__urls-wrapper { display: block; }
+  .dg-author__urls {
+    display: block;
+    position: relative;
+    z-index: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .dg-author__urls::before,
+  .dg-author__urls::after { display: none; }
+  .dg-author__urls_sm { display: none; }
+  .dg-page {
+    float: right;
+    width: 83.0508474576%;
+    padding-left: 4.2372881356%;
+  }
+}
+@media (max-width: 924px) {
+  .dg-masthead__inner-wrap { padding: .35em .85em; }
+  .dg-greedy-nav .visible-links { overflow-x: auto; }
+  .dg-greedy-nav a { margin-right: .85rem; }
+  #dg-main { margin-top: .75em; }
+  .dg-sidebar { position: relative; }
+  .dg-author__urls-wrapper:hover .dg-author__urls,
+  .dg-author__urls-wrapper:focus-within .dg-author__urls { display: block; }
+}
+@media (max-width: 720px) {
+  body { font-size: 13px; }
+  .dg-profile_box { align-items: flex-start; }
+  .dg-author__avatar-wrap { width: 88px; }
+  .dg-author__content { padding-top: .2em; }
+  .dg-page__content .dg-service-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .dg-masthead__menu-item--lg { padding-right: .75em; }
+  .dg-greedy-nav a { margin-right: .75rem; font-size: .92em; }
+  #dg-main { padding-left: .75em; padding-right: .75em; }
+}
+@keyframes dgIntro {
+  0% { opacity: 0; transform: translateY(5px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 </style>
 
-<div class="hp">
-  <aside class="hp-side">
-    <img src="{{ 'assets/img/prof_pic.jpg' | relative_url }}" alt="Jun Wang" class="avatar" />
-    <h1 class="name">Jun Wang</h1>
-    <p class="name-cn">王骏</p>
-    <p class="role">
-      UC San Diego CSE CS75 Project<br />
-      Computer Science and AI Systems
-    </p>
-    <div class="keywords">
-      <span>Agent Systems</span>
-      <span>LLM Evaluation</span>
-      <span>VLM Benchmark</span>
-      <span>RAG</span>
+<div class="dg-masthead">
+  <div class="dg-masthead__inner-wrap">
+    <div class="dg-masthead__menu">
+      <nav id="site-nav" class="dg-greedy-nav" aria-label="Primary navigation">
+        <ul class="visible-links">
+          <li class="dg-masthead__menu-item dg-masthead__menu-item--lg"><a href="#about-me">Homepage</a></li>
+          <li class="dg-masthead__menu-item"><a href="#about-me">About me</a></li>
+          <li class="dg-masthead__menu-item"><a href="#news">News</a></li>
+          <li class="dg-masthead__menu-item"><a href="#education">Education</a></li>
+          <li class="dg-masthead__menu-item"><a href="#experiences">Experiences</a></li>
+          <li class="dg-masthead__menu-item"><a href="#honors-awards">Honors & Awards</a></li>
+          <li class="dg-masthead__menu-item"><a href="#publications">Selected Publications</a></li>
+          <li class="dg-masthead__menu-item"><a href="#selected-preprints">Selected Preprints</a></li>
+          <li class="dg-masthead__menu-item"><a href="#invited-talks">Invited Talks</a></li>
+          <li class="dg-masthead__menu-item"><a href="#academic-services">Academic Services</a></li>
+        </ul>
+      </nav>
     </div>
-    <p class="meta"><i class="fa-solid fa-location-dot"></i> Beijing, China</p>
-    <div class="links">
-      <a href="mailto:wangjun170417@163.com"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
-      <a href="https://github.com/kaikkd" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
-      <a href="{{ '/cv/' | relative_url }}"><i class="fa-solid fa-file-lines"></i><span>CV</span></a>
-      <a href="{{ '/publications/' | relative_url }}"><i class="fa-solid fa-book-open"></i><span>Publications</span></a>
+  </div>
+</div>
+
+<div id="dg-main" role="main">
+  <aside class="dg-sidebar sticky">
+    <div itemscope itemtype="http://schema.org/Person" class="dg-profile_box">
+      <div class="dg-author__avatar-wrap">
+        <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" class="dg-author__avatar" alt="Jun Wang">
+      </div>
+      <div class="dg-author__content">
+        <h3 class="dg-author__name">Jun Wang</h3>
+        <p class="dg-author__bio">UC San Diego CSE CS75 Project</p>
+      </div>
+      <div class="dg-author__urls-wrapper">
+        <ul class="dg-author__urls social-icons">
+          <li><div class="dg-desc">AI Agents; Evaluation; Applied Machine Learning</div></li>
+          <li><i class="fa-solid fa-fw fa-location-dot" aria-hidden="true"></i> San Diego, CA</li>
+          <li><i class="fa-solid fa-fw fa-building-columns" aria-hidden="true"></i> UC San Diego</li>
+          <li><a href="mailto:wangjun170417@163.com"><i class="fa-solid fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+          <li><a href="https://github.com/kaikkd"><i class="fa-brands fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+          <li><a href="https://scholar.google.com/"><i class="fa-solid fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+        </ul>
+        <div class="dg-author__urls_sm">
+          <a href="mailto:wangjun170417@163.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://github.com/kaikkd" aria-label="Github"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="https://scholar.google.com/" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
+        </div>
+      </div>
     </div>
   </aside>
 
-  <main class="hp-main">
-    <section id="about-me">
-      <h2>About Me</h2>
-      <p>
-        I build practical AI systems for coding, evaluation, and multimodal understanding.
-        My current work focuses on making agent workflows stable, measurable, and useful in real engineering environments.
-      </p>
-      <p>
-        I am currently participating in the <strong>UC San Diego CSE CS75 project</strong>.
-        I received my B.Eng. in Computer Science and Technology from Beijing Forestry University.
-      </p>
-      <h3>Research Interests</h3>
-      <ul>
-        <li><strong>Agent systems</strong>: coding agents, tool-use workflows, multi-turn state management, and self-correction.</li>
-        <li><strong>Model evaluation</strong>: function-calling benchmarks, sandboxed execution, factuality checks, and LLM/VLM metrics.</li>
-        <li><strong>Applied AI</strong>: RAG systems, multimodal recognition, remote sensing, and domain adaptation.</li>
-      </ul>
-    </section>
+  <article class="dg-page" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="dg-page__inner-wrap">
+      <section class="dg-page__content" itemprop="text">
+        <span class="anchor" id="about-me"></span>
+        <h1>About Me</h1>
 
-    <section id="news">
-      <h2>News</h2>
-      <ul class="news-list">
-        <li><strong>2026.03</strong> Started the UC San Diego CSE CS75 project and focused on practical system implementation for AI agents.</li>
-        <li><strong>2025.12</strong> Built a ReAct-style coding agent with planning, tool-use, and critic-based correction.</li>
-        <li><strong>2025.08</strong> Started my internship at ByteDance, working on agent development and automated evaluation.</li>
-        <li><strong>2025</strong> Published FCDNet in IEEE Transactions on Geoscience and Remote Sensing.</li>
-      </ul>
-    </section>
+        <p>I am currently participating in the <a href="https://ucsd.edu/">UC San Diego</a> <strong>CSE CS75 Project</strong>. My work focuses on practical AI systems for coding agents, tool-use workflows, model evaluation, and multimodal understanding.</p>
 
-    <section id="education">
-      <h2>Education</h2>
-      <ul class="tl">
-        <li>
-          <div class="date">2026 - Present</div>
-          <div>
-            <div class="title">UC San Diego, CSE CS75 Project</div>
-            <div class="sub">Project-based advanced computer science implementation practice.</div>
-          </div>
-        </li>
-        <li>
-          <div class="date">2022 - 2026</div>
-          <div>
-            <div class="title">Beijing Forestry University</div>
-            <div class="sub">B.Eng. in Computer Science and Technology.</div>
-          </div>
-        </li>
-      </ul>
-    </section>
+        <p>I received my B.Eng. in Computer Science and Technology from <a href="https://www.bjfu.edu.cn/">Beijing Forestry University</a>. I have built applied systems across LLM agents, RAG, evaluation pipelines, and multimodal recognition, with engineering experience in Python, PyTorch, Docker, Git, MySQL, Java, and C.</p>
 
-    <section id="experience">
-      <h2>Research & Engineering Experience</h2>
-      <ul class="tl">
-        <li>
-          <div class="date">2025.08 - Present</div>
-          <div>
-            <div class="title">ByteDance, Agent Development / Evaluation</div>
-            <div class="sub">LLM agent evaluation, coding agent workflows, and multimodal metrics.</div>
-            <ul>
-              <li>Integrated BFCLv4 into internal evaluation workflows for large-scale function-calling assessment.</li>
-              <li>Built Docker-based sandbox execution to improve isolation and reliability for agent evaluation.</li>
-              <li>Designed multi-turn agent interaction and session state management for long-context coding tasks.</li>
-              <li>Implemented LLM/VLM metrics including factuality, BON, WON, and benchmark pipeline alignment.</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <div class="date">2024.10 - 2024.12</div>
-          <div>
-            <div class="title">LargeV Instrument, AI Algorithm Intern</div>
-            <div class="sub">Computer vision for oral scan data and model-assisted annotation.</div>
-            <ul>
-              <li>Compared and tuned YOLO models for oral scan image segmentation and classification.</li>
-              <li>Integrated model pre-detection into annotation workflows to reduce manual labeling effort.</li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </section>
+        <h3>Research Interests:</h3>
+        <ul>
+          <li><strong>General Agent Systems</strong> — Coding agents, tool-use workflows, multi-turn state management, and self-correction.</li>
+          <li><strong>Model Evaluation</strong> — Function-calling benchmarks, sandboxed execution, factuality checks, and LLM/VLM metrics.</li>
+          <li><strong>Applied AI</strong> — Retrieval-augmented generation, multimodal recognition, remote sensing, and domain adaptation.</li>
+        </ul>
 
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <div class="project">
-        <div class="p-title">Code Agent Bot: Autonomous Coding Agent based on ReAct</div>
-        <div class="p-desc">Designed a planner-analyzer-critic workflow that can react to terminal feedback, call tools, rewrite code, and verify results.</div>
-        <div class="p-meta"><span class="badge-soft">Agent</span><span class="badge-soft">ReAct</span><span class="badge-soft">MCP</span></div>
-      </div>
-      <div class="project">
-        <div class="p-title">Medical RAG Question Answering System</div>
-        <div class="p-desc">Built an end-to-end RAG stack using FAISS retrieval, BGE reranking, multi-model inference, and automatic quality evaluation.</div>
-        <div class="p-meta"><span class="badge-soft">RAG</span><span class="badge-soft">LangChain</span><span class="badge-soft">Streamlit</span></div>
-      </div>
-      <div class="project">
-        <div class="p-title">Forestry Knowledge QA with LoRA Fine-tuning</div>
-        <div class="p-desc">Fine-tuned a Qwen-based model with LoRA and built a streaming Gradio interface for domain-specific forestry QA.</div>
-        <div class="p-meta"><span class="badge-soft">LoRA</span><span class="badge-soft">Qwen</span><span class="badge-soft">Gradio</span></div>
-      </div>
-      <div class="project">
-        <div class="p-title">Multimodal Waterbird Recognition System</div>
-        <div class="p-desc">Developed an image-audio recognition pipeline and deployed backend APIs for waterbird identification.</div>
-        <div class="p-meta"><span class="badge-soft">CV</span><span class="badge-soft">Audio</span><span class="badge-soft">Flask</span></div>
-      </div>
-    </section>
+        <p>My long-term goal is to build reliable AI systems that can solve real engineering tasks with clear evaluation, controllable tool use, and robust feedback loops.</p>
 
-    <section id="publications">
-      <h2>Selected Publications</h2>
-      <div class="paper">
-        <div class="p-title">FCDNet: A Multi-Scale Attention Network for Forest Change Detection Using Dual-Temporal Very-High-Resolution Remote Sensing Images</div>
-        <div class="p-authors"><strong>Jun Wang</strong>, Zongqi Yao, Long Chen, Ruijing Yang, Xiaoli Zha</div>
-        <div class="p-meta"><span class="badge-soft">IEEE TGRS 2025</span><span class="link-bracket"><a href="https://doi.org/10.1109/TGRS.2025.3631750" target="_blank">paper</a></span></div>
-      </div>
-      <div class="paper">
-        <div class="p-title">GCAO: Group-driven Clustering via Gravitational Attraction and Optimization</div>
-        <div class="p-authors">Qi Li, <strong>Jun Wang</strong></div>
-        <div class="p-meta"><span class="badge-soft">arXiv 2025</span><span class="link-bracket"><a href="https://doi.org/10.48550/arXiv.2510.23259" target="_blank">paper</a></span></div>
-      </div>
-      <div class="paper">
-        <div class="p-title">ForestFoodKG: A Structured Dataset and Knowledge Graph for Forest Food Taxonomy and Nutrition</div>
-        <div class="p-authors">Rongen Yan, Zhidan Chen, Shengqi Zhou, Guoxing Niu, Yan Li, Zehui Liu, <strong>Jun Wang</strong>, et al.</div>
-        <div class="p-meta"><span class="badge-soft">Foods 2025</span><span class="link-bracket"><a href="https://doi.org/10.3390/foods14244186" target="_blank">paper</a></span></div>
-      </div>
-    </section>
+        <span class="anchor" id="news"></span>
+        <h1>🔥 News</h1>
+        <ul>
+          <li><em>2026.03</em>: Started the <strong>UC San Diego CSE CS75 Project</strong>.</li>
+          <li><em>2025.12</em>: Built a ReAct-style coding agent with tool execution, sandbox feedback, and iterative repair.</li>
+          <li><em>2025.08</em>: Started internship work at <strong>ByteDance</strong>, focusing on agent development and evaluation.</li>
+          <li><em>2025</em>: <strong>FCDNet</strong> was published in <em>IEEE Transactions on Geoscience and Remote Sensing</em>.</li>
+        </ul>
 
-    <section id="honors">
-      <h2>Honors & Awards</h2>
-      <ul class="award-list">
-        <li>National First Prize, Multimedia Application Competition.</li>
-        <li>ACM programming competition silver award, Beijing Forestry University.</li>
-        <li>TOEFL 103.</li>
-      </ul>
-    </section>
+        <span class="anchor" id="education"></span>
+        <h1>📖 Education</h1>
+        <ul>
+          <li><span style="font-size: 0.92em;"><strong>2026.03 - Present</strong> | <span class="dg-inline-logo">U</span> <strong>UC San Diego CSE CS75 Project</strong></span><br>University of California San Diego</li>
+          <li><span style="font-size: 0.92em;"><strong>2022.09 - 2026.06</strong> | <span class="dg-inline-logo">B</span> <strong>B.Eng. in Computer Science and Technology</strong></span><br>Beijing Forestry University</li>
+        </ul>
 
-    <section id="services">
-      <h2>Skills</h2>
-      <ul class="award-list">
-        <li><strong>Programming</strong>: Python, PyTorch, Docker, Git, MySQL, Java, C.</li>
-        <li><strong>AI systems</strong>: LangChain, RAG, function calling, evaluation pipelines, model benchmarking.</li>
-        <li><strong>Interfaces</strong>: Streamlit, Gradio, Flask, web-based agent interaction.</li>
-      </ul>
-    </section>
+        <span class="anchor" id="experiences"></span>
+        <h1>💻 Research Experience</h1>
+        <ul>
+          <li><span style="font-size: 0.92em;"><strong>2025.08 - Present</strong> | <strong>ByteDance, Agent Development / Evaluation</strong></span><br><span style="font-size: 0.869em;">- Built and evaluated LLM agent workflows with tool calling, benchmark instrumentation, and execution feedback.<br>- Worked on practical coding-agent behavior, failure analysis, and iterative improvement loops.</span></li>
+          <li><span style="font-size: 0.92em;"><strong>2024.10 - 2024.12</strong> | <strong>LargeV Instrument, AI Algorithm Intern</strong></span><br><span style="font-size: 0.869em;">- Developed applied AI components for recognition and analysis workflows.<br>- Improved model inference, data processing, and system integration for production-oriented prototypes.</span></li>
+        </ul>
 
-    <footer class="hp-footer">Last updated: May 2026</footer>
-  </main>
+        <span class="anchor" id="honors-awards"></span>
+        <h1>🏆 Honors & Awards</h1>
+        <h3>Competitions and Recognition</h3>
+        <ul>
+          <li>National First Prize, Multimedia Application Competition.</li>
+          <li>Silver Award, ACM Programming Competition, Beijing Forestry University.</li>
+          <li>TOEFL 103.</li>
+        </ul>
 
-  <nav class="hp-toc" aria-label="Table of contents">
-    <ul>
-      <li><a href="#about-me">About Me</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#honors">Honors</a></li>
-      <li><a href="#services">Skills</a></li>
-    </ul>
-  </nav>
+        <span class="anchor" id="publications"></span>
+        <h1>📝 Selected Publications</h1>
+        <p><em>Selected peer-reviewed publications and research manuscripts.</em></p>
+
+        <h3>2025</h3>
+        <div class="dg-paper">
+          <span style="font-size: 0.92em;"><a href="https://doi.org/10.1109/TGRS.2025.3631750"><strong>FCDNet: Frequency Curriculum Domain Adaptation Network for Remote Sensing Semantic Segmentation</strong></a></span><br>
+          <span style="font-size: 0.869em;"><strong>Jun Wang</strong> et al.</span><br>
+          <span style="font-size: 0.87em; color: #c00000;"><strong>IEEE Transactions on Geoscience and Remote Sensing, 2025</strong></span>
+          <a class="dg-badge" href="https://doi.org/10.1109/TGRS.2025.3631750">DOI</a>
+        </div>
+
+        <div class="dg-paper">
+          <span style="font-size: 0.92em;"><a href="https://doi.org/10.48550/arXiv.2510.23259"><strong>GCAO: A General Coding Agent Optimization Framework</strong></a></span><br>
+          <span style="font-size: 0.869em;"><strong>Jun Wang</strong> et al.</span><br>
+          <span style="font-size: 0.87em; color: #c00000;"><strong>arXiv, 2025</strong></span>
+          <a class="dg-badge" href="https://doi.org/10.48550/arXiv.2510.23259">DOI</a>
+        </div>
+
+        <div class="dg-paper">
+          <span style="font-size: 0.92em;"><a href="https://doi.org/10.3390/foods14244186"><strong>ForestFoodKG: Knowledge Graph Construction for Forestry Food Domain QA</strong></a></span><br>
+          <span style="font-size: 0.869em;"><strong>Jun Wang</strong> et al.</span><br>
+          <span style="font-size: 0.87em; color: #c00000;"><strong>Foods, 2025</strong></span>
+          <a class="dg-badge" href="https://doi.org/10.3390/foods14244186">DOI</a>
+        </div>
+
+        <span class="anchor" id="selected-preprints"></span>
+        <h1>📝 Selected Preprints</h1>
+        <p><em>Representative projects, preprints, and technical reports.</em></p>
+        <ul>
+          <li><span style="font-size: 0.92em;"><strong>Code Agent Bot</strong></span><br><span style="font-size: 0.869em;">A ReAct-style coding agent with terminal tools, sandbox execution, multi-turn memory, and automatic repair.</span></li>
+          <li><span style="font-size: 0.92em;"><strong>Medical RAG QA System</strong></span><br><span style="font-size: 0.869em;">A retrieval-augmented question-answering system with document indexing, answer grounding, and interface deployment.</span></li>
+          <li><span style="font-size: 0.92em;"><strong>Forestry Knowledge QA with LoRA Fine-tuning</strong></span><br><span style="font-size: 0.869em;">A domain QA system combining instruction tuning, knowledge retrieval, and forestry-specific data processing.</span></li>
+          <li><span style="font-size: 0.92em;"><strong>Multimodal Waterbird Recognition System</strong></span><br><span style="font-size: 0.869em;">An applied recognition system for multimodal classification and practical deployment.</span></li>
+        </ul>
+
+        <span class="anchor" id="invited-talks"></span>
+        <h1>🎤 Invited Talks</h1>
+        <ul>
+          <li><em>Available upon request.</em></li>
+        </ul>
+
+        <span class="anchor" id="academic-services"></span>
+        <h1>🔍 Academic Services</h1>
+        <ul class="dg-service-grid">
+          <li><strong>Programming:</strong> Python, PyTorch, Docker, Git, MySQL, Java, C.</li>
+          <li><strong>AI Systems:</strong> LangChain, RAG, function calling, evaluation pipelines, benchmarking.</li>
+          <li><strong>Interfaces:</strong> Streamlit, Gradio, Flask, web-based agent interaction.</li>
+          <li><strong>Research Workflow:</strong> literature review, experiment tracking, error analysis, report writing.</li>
+        </ul>
+
+        <div class="dg-footer-note">Last updated: May 2026. Hosted on GitHub Pages.</div>
+      </section>
+    </div>
+
+  </article>
 </div>
-
-<script>
-(function () {
-  var toc = document.querySelectorAll('.hp-toc a');
-  if (!toc.length) return;
-
-  var sections = [];
-  toc.forEach(function (a) {
-    var id = a.getAttribute('href').slice(1);
-    var el = document.getElementById(id);
-    if (el) sections.push({ id: id, el: el, link: a });
-  });
-
-  function update() {
-    var y = window.scrollY + 120;
-    var current = '';
-    sections.forEach(function (s) {
-      if (s.el.offsetTop <= y) current = s.id;
-    });
-    sections.forEach(function (s) {
-      s.link.classList.toggle('active', s.id === current);
-    });
-  }
-
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-})();
-</script>
