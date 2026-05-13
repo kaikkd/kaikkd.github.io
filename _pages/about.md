@@ -92,7 +92,6 @@ _Selected peer-reviewed publications and manuscripts._
 
 - National First Prize, Multimedia Application Competition.
 - Silver Award, ACM Programming Competition, Beijing Forestry University.
-- TOEFL 103.
 
 <span class="anchor" id="skills"></span>
 
