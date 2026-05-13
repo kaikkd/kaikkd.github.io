@@ -44,30 +44,6 @@ I received my B.Agr. in Forestry as my first degree and a B.Eng. in Computer Sci
 - <span style="font-size: 0.92em;">**2024.10 - 2024.12** | **LargeV Instrument, AI Algorithm Intern**</span><br>
   <span style="font-size: 0.869em;">- Applied YOLO-based models to oral scan data and supported model tuning and data processing.<br>- Integrated model-assisted annotation workflows to reduce manual labeling effort.</span>
 
-<span class="anchor" id="projects"></span>
-
-# 🛠️ Representative Projects
-
-- <span style="font-size: 0.92em;">**Code Agent Bot**</span><br>
-  <span style="font-size: 0.869em;">A coding-agent prototype with ReAct-style planning, terminal tool use, sandbox execution, and feedback-based repair.</span>
-
-- <span style="font-size: 0.92em;">**Medical RAG QA System**</span><br>
-  <span style="font-size: 0.869em;">A retrieval-augmented QA prototype with document indexing, answer grounding, and a lightweight interactive interface.</span>
-
-- <span style="font-size: 0.92em;">**Forestry Knowledge QA with LoRA Fine-tuning**</span><br>
-  <span style="font-size: 0.869em;">A domain QA project combining forestry-related data preparation, retrieval, and lightweight fine-tuning experiments.</span>
-
-- <span style="font-size: 0.92em;">**Multimodal Waterbird Recognition System**</span><br>
-  <span style="font-size: 0.869em;">An applied recognition project exploring image/audio inputs and backend service deployment.</span>
-
-<span class="anchor" id="skills"></span>
-
-# 🔍 Skills
-
-- **Programming:** Python, PyTorch, Docker, Git, MySQL; familiar with Java and C from coursework and projects.
-- **AI Systems:** LLM evaluation, function-calling workflows, RAG prototypes, and benchmark integration.
-- **Interfaces & Tools:** Streamlit, Gradio, Flask, basic web interfaces, and experiment/log analysis.
-
 <span class="anchor" id="publications"></span>
 
 # 📝 Selected Publications
@@ -94,6 +70,22 @@ _Selected peer-reviewed publications and manuscripts._
   <div class="paper-venue"><strong>Foods, 2025</strong> <a class="pub-badge" href="https://doi.org/10.3390/foods14244186">DOI</a></div>
 </div>
 
+<span class="anchor" id="projects"></span>
+
+# 🛠️ Representative Projects
+
+- <span style="font-size: 0.92em;">**Code Agent Bot**</span><br>
+  <span style="font-size: 0.869em;">A coding-agent prototype with ReAct-style planning, terminal tool use, sandbox execution, and feedback-based repair.</span>
+
+- <span style="font-size: 0.92em;">**Medical RAG QA System**</span><br>
+  <span style="font-size: 0.869em;">A retrieval-augmented QA prototype with document indexing, answer grounding, and a lightweight interactive interface.</span>
+
+- <span style="font-size: 0.92em;">**Forestry Knowledge QA with LoRA Fine-tuning**</span><br>
+  <span style="font-size: 0.869em;">A domain QA project combining forestry-related data preparation, retrieval, and lightweight fine-tuning experiments.</span>
+
+- <span style="font-size: 0.92em;">**Multimodal Waterbird Recognition System**</span><br>
+  <span style="font-size: 0.869em;">An applied recognition project exploring image/audio inputs and backend service deployment.</span>
+
 <span class="anchor" id="honors-awards"></span>
 
 # 🏆 Honors & Awards
@@ -101,5 +93,13 @@ _Selected peer-reviewed publications and manuscripts._
 - National First Prize, Multimedia Application Competition.
 - Silver Award, ACM Programming Competition, Beijing Forestry University.
 - TOEFL 103.
+
+<span class="anchor" id="skills"></span>
+
+# 🔍 Skills
+
+- **Programming:** Python, PyTorch, Docker, Git, MySQL; familiar with Java and C from coursework and projects.
+- **AI Systems:** LLM evaluation, function-calling workflows, RAG prototypes, and benchmark integration.
+- **Interfaces & Tools:** Streamlit, Gradio, Flask, basic web interfaces, and experiment/log analysis.
 
 <div class="site-note">Last updated: May 2026. Hosted on GitHub Pages.</div>
