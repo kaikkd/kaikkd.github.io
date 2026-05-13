@@ -1,6 +1,6 @@
 cv:
   name: Jun Wang
-  label: UC San Diego CSE CS75 Project
+  label: Agent Development / Evaluation Intern at ByteDance
   email: wangjun170417@163.com
   location: Beijing, China
   image: ""
@@ -17,23 +17,25 @@ cv:
       - institution: University of California, San Diego
         location: San Diego, CA, USA
         area: CSE CS75 Project
-        studyType: Project-based Program
-        start_date: 2026-01-01
+        studyType: Master's Program / CSE CS75 Project
+        start_date: 2026-09-01
+        end_date: 2027-12-01
         highlights:
-          - Current project participant.
+          - Expected to begin in September 2026.
 
       - institution: Beijing Forestry University
         location: Beijing, China
-        area: Computer Science and Technology
-        studyType: Bachelor of Engineering
+        area: Forestry; Computer Science and Technology
+        studyType: Bachelor of Agriculture in Forestry; Bachelor of Engineering in Computer Science and Technology (Minor)
         start_date: 2022-09-01
         end_date: 2026-06-01
 
     Experience:
       - company: ByteDance
-        position: Agent Development / Evaluation
+        position: Agent Development / Evaluation Intern
         location: Beijing, China
         start_date: 2025-08-01
+        end_date: 2026-07-31
         highlights:
           - Integrated BFCLv4 into internal evaluation workflows for automated function-calling assessment.
           - Built distributed Docker sandbox execution to improve stability and isolation.
